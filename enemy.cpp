@@ -1,0 +1,211 @@
+#include "SDL/SDL.h"
+#include "SDL/SDL_image.h"
+
+#include "functions_common.h"
+#include "variables.h"
+#include "enemy.h"
+
+Enemy::Enemy(int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        offSet[i] = enemy_coordx[i];
+        positionX[i]=0;
+        positionY[i]=enemy_coordy[i];
+        velocity[i] = 20;
+        health[i]=30;
+        alive[i]=true;
+        frame[i] = 0;
+        frame_idle[i]=0;
+        idle_cond[i]=true;
+        status[i] = i%2;
+    }
+}
+
+
+int Enemy::handle_events()
+{
+    int attack=0;
+    for(int i=0;i<enemy_c;i++)
+    {
+        if(!alive[i])
+            continue;
+
+        if(camera.x+positionX[i]-level_beginx+offSet[i]>=(-32) && camera.x+positionX[i]-level_beginx+offSet[i]<=32&&positionY[i]-level_beginy>=(-64)&&positionY[i]-level_beginy<=(64))
+        {
+            printf("Crash : %d\n",i);
+            apply_surface( 300, 500, TTF_RenderText_Solid( font, "crash", textColor ), screen );
+            attack++;
+        }
+        for(int j=0;j<5;j++)
+        {
+            if(weapon_blue_active[j])
+            {
+                if(positionX[i]+offSet[i]-weapon_blue_coordx[j]>=(-32) && positionX[i]+offSet[i]-weapon_blue_coordx[j]<=32&&positionY[i]-weapon_blue_coordy[j]>=(-48)&&positionY[i]-weapon_blue_coordy[j]<=(48))
+                {
+                    printf("Die Moron : %d\n",i);
+                    alive[i]=false;
+                    score+=50;
+                    weapon_blue_active[j]=0;
+                }
+            }
+        }
+
+    }
+    return attack;
+}
+
+void Enemy::move(int i)
+{
+    if(status[i]==PLAYER_LEFT)
+    {
+        positionX[i]-=velocity[i];
+        if(positionX[i]<=-300)
+        {
+            status[i]=PLAYER_RIGHT;
+        }
+    }
+    else
+    {
+        positionX[i]+=velocity[i];
+        if(positionX[i]>=300)
+        {
+            status[i]=PLAYER_LEFT;
+        }
+    }
+}
+
+void Enemy::show()
+{
+    for(int i=0;i<enemy_c;i++)
+    {
+        if(!alive[i])
+            continue;
+        move(i);
+
+        frame[i]++;
+        if(frame[i]>=10)
+            frame[i]=0;
+
+        if( status[i] == PLAYER_RIGHT )
+        {
+            apply_surface( offSet[i]+positionX[i]-camera.x, positionY[i], Enemy_r, screen, &clipsEWalkRight[ frame[i] ] );
+        }
+        else if( status[i] == PLAYER_LEFT )
+        {
+            apply_surface( offSet[i]+positionX[i]-camera.x, positionY[i], Enemy_l, screen, &clipsEWalkLeft[ frame[i] ] );
+        }
+        //char numfr[30];
+        //sprintf(numfr,"%d - %d",camera.x+positionX,level_beginx);
+        //apply_surface( 200, 500, TTF_RenderText_Solid( font, numfr, textColor ), screen );
+    }
+}
+
+void Enemy::fire()
+{
+
+}
+
+
+Enemy2::Enemy2(int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        offSet[i] = enemy2_coordx[i];
+        positionX[i]=0;
+        positionY[i]=enemy2_coordy[i];
+        velocity[i] = 20;
+        health[i]=30;
+        alive[i]=true;
+        frame[i] = 0;
+        frame_idle[i]=0;
+        idle_cond[i]=true;
+        status[i] = i%2;
+    }
+}
+
+
+int Enemy2::handle_events()
+{
+    int attack=0;
+    for(int i=0;i<enemy2_c;i++)
+    {
+        if(!alive[i])
+            continue;
+        if(camera.x+positionX[i]-level_beginx+offSet[i]>=(-32) && camera.x+positionX[i]-level_beginx+offSet[i]<=32&&positionY[i]-level_beginy>=(-64)&&positionY[i]-level_beginy<=(64))
+        {
+            printf("Crash : %d\n",i);
+            apply_surface( 300, 500, TTF_RenderText_Solid( font, "crash", textColor ), screen );
+            attack++;
+        }
+        for(int j=0;j<5;j++)
+        {
+            if(weapon_blue_active[j])
+            {
+                if(positionX[i]+offSet[i]-weapon_blue_coordx[j]>=(-32) && positionX[i]+offSet[i]-weapon_blue_coordx[j]<=32&&positionY[i]-weapon_blue_coordy[j]>=(-48)&&positionY[i]-weapon_blue_coordy[j]<=(48))
+                {
+                    apply_surface( 600, 500, TTF_RenderText_Solid( font, "Hit Hard", textColor ), screen );
+                    printf("Die Moron : %d\n",i);
+                    alive[i]=false;
+                    score+=100;
+                    weapon_blue_active[j]=0;
+                    break;
+                }
+            }
+        }
+    }
+
+    return attack;
+}
+
+void Enemy2::move(int i)
+{
+if(status[i]==PLAYER_LEFT)
+{
+    positionX[i]-=velocity[i];
+    if(positionX[i]<=-120)
+    {
+        status[i]=PLAYER_RIGHT;
+    }
+}
+else
+{
+    positionX[i]+=velocity[i];
+    if(positionX[i]>=120)
+    {
+        status[i]=PLAYER_LEFT;
+    }
+}
+}
+
+void Enemy2::show()
+{
+    for(int i=0;i<enemy2_c;i++)
+    {
+        if(!alive[i])
+            continue;
+        move(i);
+
+        frame[i]++;
+        if(frame[i]>=10)
+            frame[i]=0;
+
+        if( status[i] == PLAYER_RIGHT )
+        {
+            apply_surface( offSet[i]+positionX[i]-camera.x, positionY[i], EnemyA_r, screen, &clipsEWalkRight[ frame[i] ] );
+        }
+        else if( status[i] == PLAYER_LEFT )
+        {
+            apply_surface( offSet[i]+positionX[i]-camera.x, positionY[i], EnemyA_l, screen, &clipsEWalkLeft[ frame[i] ] );
+        }
+        //char numfr[30];
+        //sprintf(numfr,"%d - %d",camera.x+positionX,level_beginx);
+        //apply_surface( 200, 500, TTF_RenderText_Solid( font, numfr, textColor ), screen );
+    }
+}
+
+void Enemy2::fire()
+{
+
+}
+

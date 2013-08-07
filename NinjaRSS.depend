@@ -1,0 +1,254 @@
+# depslib dependency file v1.0
+1327243630 source:d:\platformer_4_0\platformer\wintry\ninjarss\main.cpp
+	"SDL/SDL.h"
+	<stdio.h>
+	"functions_common.h"
+	"load_screen.h"
+	"high_scores.h"
+	"sprite_cut.h"
+	"game_logic.h"
+	"credits.h"
+
+1325963802 source:d:\platformer_4_0\platformer\wintry\ninjarss\md5.cpp
+	"md5.h"
+	<stdio.h>
+	<string.h>
+
+1299250883 d:\platformer_4_0\platformer\wintry\ninjarss\md5.h
+	<string>
+	<iostream>
+
+1327144155 source:d:\platformer_4_0\platformer\wintry\ninjarss\timer.cpp
+	"SDL/SDL.h"
+	"timer.h"
+
+1327143988 d:\platformer_4_0\platformer\wintry\ninjarss\timer.h
+
+1327241471 source:d:\platformer_4_0\platformer\wintry\ninjarss\functions_common.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+	"functions_common.h"
+	"variables.h"
+
+1327147555 d:\platformer_4_0\platformer\wintry\ninjarss\functions_common.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+
+1327238447 d:\platformer_4_0\platformer\wintry\ninjarss\variables.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+
+1327237481 source:d:\platformer_4_0\platformer\wintry\ninjarss\load_screen.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	"load_screen.h"
+	"functions_common.h"
+	"variables.h"
+
+1327145407 d:\platformer_4_0\platformer\wintry\ninjarss\load_screen.h
+
+1327238460 source:d:\platformer_4_0\platformer\wintry\ninjarss\variables.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	"variables.h"
+
+1327243057 source:d:\platformer_4_0\platformer\wintry\ninjarss\high_scores.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	"SDL/SDL_mixer.h"
+	<string>
+	"functions_common.h"
+	"variables.h"
+	"md5.h"
+
+1327147817 d:\platformer_4_0\platformer\wintry\ninjarss\high_scores.h
+	<string>
+
+1327236638 d:\platformer_4_0\platformer\wintry\ninjarss\main_player.h
+
+1327239565 source:d:\platformer_4_0\platformer\wintry\ninjarss\main_player.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"functions_common.h"
+	"variables.h"
+	"main_player.h"
+
+1327235365 source:d:\platformer_4_0\platformer\wintry\ninjarss\sprite_cut.cpp
+	"sprite_cut.h"
+	"variables.h"
+
+1327235436 d:\platformer_4_0\platformer\wintry\ninjarss\sprite_cut.h
+
+1327239240 source:d:\platformer_4_0\platformer\wintry\ninjarss\game_logic.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	"SDL/SDL_ttf.h"
+	"game_logic.h"
+	"functions_common.h"
+	"variables.h"
+	"timer.h"
+	"main_player.h"
+
+1327235847 d:\platformer_4_0\platformer\wintry\ninjarss\game_logic.h
+
+1327241615 d:\platformer_4_0\platformer\wintry\ninjarss\credits.h
+
+1327242983 source:d:\platformer_4_0\platformer\wintry\ninjarss\credits.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	"credits.h"
+	"functions_common.h"
+	"variables.h"
+
+1325963802 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\md5.cpp
+	"md5.h"
+	<stdio.h>
+	<string.h>
+
+1299250883 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\md5.h
+	<string>
+	<iostream>
+
+1333042083 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\credits.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	"credits.h"
+	"functions_common.h"
+	"variables.h"
+
+1327241615 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\credits.h
+
+1337389901 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\functions_common.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+
+1337389440 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\variables.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+
+1337394905 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\functions_common.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+	"functions_common.h"
+	"variables.h"
+
+1337389973 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\game_logic.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	"SDL/SDL_ttf.h"
+	"game_logic.h"
+	"functions_common.h"
+	"variables.h"
+	"timer.h"
+	"main_player.h"
+	"enemy.h"
+	"stone.h"
+	"diamond.h"
+	<string>
+	<ctime>
+
+1327235847 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\game_logic.h
+
+1327143988 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\timer.h
+
+1337354967 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\main_player.h
+
+1337198854 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\high_scores.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	"SDL/SDL_mixer.h"
+	<string>
+	"functions_common.h"
+	"variables.h"
+	"md5.h"
+
+1337200302 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\load_screen.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	"load_screen.h"
+	"functions_common.h"
+	"variables.h"
+
+1327145407 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\load_screen.h
+
+1337390098 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\main.cpp
+	"SDL/SDL.h"
+	<stdio.h>
+	"functions_common.h"
+	"load_screen.h"
+	"high_scores.h"
+	"sprite_cut.h"
+	"game_logic.h"
+	"credits.h"
+	<iostream>
+
+1327147817 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\high_scores.h
+	<string>
+
+1327235436 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\sprite_cut.h
+
+1337355039 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\main_player.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"functions_common.h"
+	"variables.h"
+	"main_player.h"
+
+1334951285 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\sprite_cut.cpp
+	"sprite_cut.h"
+	"variables.h"
+
+1337198919 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\timer.cpp
+	"SDL/SDL.h"
+	"timer.h"
+
+1337389429 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\variables.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	"variables.h"
+
+1337198912 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\text_input.cpp
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	<string>
+	"functions_common.h"
+	"variables.h"
+
+1337387750 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\enemy.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"functions_common.h"
+	"variables.h"
+	"enemy.h"
+
+1337332647 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\enemy.h
+
+1335041237 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\stone.cpp
+	"functions_common.h"
+	"variables.h"
+	<ctime>
+
+1337388848 source:f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\diamond.cpp
+	"functions_common.h"
+	"variables.h"
+
+1335039529 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\stone.h
+
+1335040105 f:\transferred d\platformer_4_0\platformer\wintry\ninjarss\diamond.h
+

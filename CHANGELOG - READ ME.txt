@@ -1,0 +1,32 @@
+===================================
+Jan 22, 2012 04:00:00 IST (Kamal)
+===================================
+---> Added game Music
+---> Added new Sprites
+
+===================================
+Jan 22, 2012 22:50:00 IST (Kamal)
+===================================
+--> New Sprite Used
+--> Credit menu Activated
+--> Unix Compatibility Checked("All fine")
+
+===================================
+May 03, 2012 21:55:00 IST (Kamal)
+===================================
+--> Enemy Sprite activated
+--> Jump/block condition automation
+--> New Menu 
+--> Attached the exe for Mohit Solanki's  execution
+
+===================================
+May 18, 2012 16:35:00 IST (Kamal)
+===================================
+--> Enemy 2 Sprite activated and movement corrected
+--> Overlay Death Monitoring
+--> Navigation from game to main screen possible
+
+===================================
+May 18, 2012 21:47:00 IST (Kamal)
+===================================
+--> Weapon Activated

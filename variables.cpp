@@ -1,0 +1,67 @@
+
+#include "SDL/SDL.h"
+#include "SDL/SDL_image.h"
+#include "SDL/SDL_ttf.h"
+#include "variables.h"
+
+const int PLAYER_RIGHT = 0;
+const int PLAYER_LEFT = 1;
+const int FRAMES_PER_SECOND = 30;
+
+SDL_Surface *Player_r = NULL,*Player_l = NULL,*Player_jr=NULL,*Player_jl=NULL,*Player_idler=NULL,*Player_idlel=NULL;
+SDL_Surface *Enemy_r = NULL,*Enemy_l = NULL,*Enemy_jr=NULL,*Enemy_jl=NULL,*Enemy_idler=NULL,*Enemy_idlel=NULL;
+SDL_Surface *EnemyA_r=NULL,*EnemyA_l=NULL,*EnemyA_jr=NULL,*EnemyA_jl=NULL,*EnemyA_idler=NULL,*EnemyA_idlel=NULL;
+SDL_Surface* screen =NULL;
+SDL_Surface* background1 =NULL,*background2=NULL,*background3=NULL,*background0=NULL;
+SDL_Surface* block=NULL,*diamond=NULL,*diamond2=NULL,*exitsign=NULL,*shuriken=NULL,*health_bar=NULL,*health_barv=NULL;
+SDL_Surface* message =NULL,*upMessage=NULL, *downMessage=NULL, *leftMessage=NULL, *rightMessage=NULL;
+SDL_Surface* overlay_die=NULL,*overlay_lose=NULL,*overlay_win=NULL;
+SDL_Surface* weapon_blue=NULL;
+SDL_Event event;
+
+SDL_Rect clip[4];
+SDL_Rect clipsWalkRight[ 10 ];
+SDL_Rect clipsWalkLeft[ 10 ];
+SDL_Rect clipsStanceRight[ 10 ];
+SDL_Rect clipsStanceLeft[ 10 ];
+SDL_Rect clipsJumpRight[ 12 ];
+SDL_Rect clipsJumpLeft[ 12 ];
+SDL_Rect clipsEWalkRight[ 10 ];
+SDL_Rect clipsEWalkLeft[ 10 ];
+SDL_Rect camera={0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
+SDL_Rect camera1={0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
+SDL_Rect camera2={0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
+
+
+TTF_Font *font =NULL;
+
+SDL_Color textColor={10,10,10};
+
+int level_no=1;
+int stone_coordx[1000],stone_coordy[1000],stone_c=0;
+int diamond_coordx[1000],diamond_coordy[1000],diamond_c=0,diamond_mov[1000];
+int diamond2_coordx[1000],diamond2_coordy[1000],diamond2_c=0,diamond2_mov[1000];
+int enemy_coordx[1000],enemy_coordy[1000],enemy_c=0;
+int enemy2_coordx[1000],enemy2_coordy[1000],enemy2_c=0;
+int weapon_blue_coordx[10],weapon_blue_coordy[10],weapon_blue_active[10],weapon_blue_c[10],weapon_blue_o[10];
+int level_beginx,level_beginy;
+int level_endx,level_endy;
+int jump_val=10;
+int score=0;
+
+char level_info[2][240][300];
+
+bool quit=false;
+bool diamond_visible[1000],diamond2_visible[1000];
+bool jump_condition=false;
+bool free_fall=false;
+bool not_landed=false;
+bool collision_course =false;
+bool shuriken_fire=true;
+bool first_exec=true;
+bool game_lost=false;
+bool sad_tune=true;
+
+Uint8 *keystates = SDL_GetKeyState( NULL );
+
+char scoreboard[100]="Score : ";
